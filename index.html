@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoncoMed | Clínica de Ronquido y Apnea · Boca del Río</title>
+  <meta name="description" content="RoncoMed: diagnóstico y tratamiento de apnea del sueño, ronquido y trastornos respiratorios del sueño en Boca del Río, Veracruz.">
+  <meta name="theme-color" content="#0E3A5C">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Tipografías: Montserrat va con el logotipo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de scroll (animación superior) -->
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__logo" aria-label="RoncoMed, ir al inicio">
+        <img src="img/logo.png" alt="RoncoMed · Clínica de Ronquido y Apnea">
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Menú principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#equipo">Especialistas</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn--primary btn--sm">Agendar cita</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <!-- Nubes y estrellas animadas de fondo -->
+      <div class="hero__sky" aria-hidden="true">
+        <div class="cloud cloud--1"></div>
+        <div class="cloud cloud--2"></div>
+        <div class="cloud cloud--3"></div>
+        <svg class="star star--1" viewBox="0 0 24 24"><path d="M12 0 L13.4 10.6 L24 12 L13.4 13.4 L12 24 L10.6 13.4 L0 12 L10.6 10.6 Z"/></svg>
+        <svg class="star star--2" viewBox="0 0 24 24"><path d="M12 0 L13.4 10.6 L24 12 L13.4 13.4 L12 24 L10.6 13.4 L0 12 L10.6 10.6 Z"/></svg>
+        <svg class="star star--3" viewBox="0 0 24 24"><path d="M12 0 L13.4 10.6 L24 12 L13.4 13.4 L12 24 L10.6 13.4 L0 12 L10.6 10.6 Z"/></svg>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow reveal">Clínica de Ronquido y Apnea · Boca del Río</p>
+          <h1 class="reveal" data-delay="1">
+            Duerme profundo.<br>
+            <span class="hero__rotator">Respira <em id="rotator">tranquilo</em>.</span>
+          </h1>
+          <p class="hero__lead reveal" data-delay="2">
+            Diagnóstico y tratamiento especializado del ronquido, la apnea del sueño y otros
+            trastornos respiratorios que afectan tu descanso y tu calidad de vida.
+          </p>
+          <div class="hero__ctas reveal" data-delay="3">
+            <a href="#contacto" class="btn btn--primary">
+              Agenda tu valoración
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#sintomas" class="btn btn--ghost">¿Ronco? Haz el test</a>
+          </div>
+
+          <ul class="hero__badges reveal" data-delay="4">
+            <li><strong>2</strong><span>especialistas</span></li>
+            <li><strong>360°</strong><span>diagnóstico integral</span></li>
+            <li><strong>1 a 1</strong><span>atención personalizada</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" data-delay="2">
+          <div class="hero__photo tilt">
+            <img src="img/descanso.jpg" alt="Mujer descansando plácidamente">
+          </div>
+          <div class="float-card float-card--a">
+            <span class="float-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            </span>
+            <div>
+              <strong>Sueño reparador</strong>
+              <small>Despierta con energía</small>
+            </div>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="pulse-dot"></span>
+            <div>
+              <strong>Citas disponibles</strong>
+              <small>Esta semana</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#marquee" class="scroll-cue" aria-label="Desplazarse hacia abajo"><span></span></a>
+    </section>
+
+    <!-- ===================== CINTA ANIMADA ===================== -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Ronquido</span><i>✦</i><span>Apnea obstructiva del sueño</span><i>✦</i><span>Somnolencia diurna</span><i>✦</i><span>Obstrucción nasal</span><i>✦</i><span>Terapia CPAP</span><i>✦</i><span>Cirugía del sueño</span><i>✦</i><span>Estudios de sueño</span><i>✦</i>
+        <span>Ronquido</span><i>✦</i><span>Apnea obstructiva del sueño</span><i>✦</i><span>Somnolencia diurna</span><i>✦</i><span>Obstrucción nasal</span><i>✦</i><span>Terapia CPAP</span><i>✦</i><span>Cirugía del sueño</span><i>✦</i><span>Estudios de sueño</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===================== NOSOTROS / MISIÓN ===================== -->
+    <section class="section" id="nosotros">
+      <div class="container about">
+        <div class="about__media reveal">
+          <div class="about__frame">
+            <img src="img/portada.jpg" alt="Portada de RoncoMed">
+          </div>
+          <div class="about__stamp">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+              <text><textPath href="#circ">DESCANSA · RESPIRA · VIVE MEJOR · </textPath></text>
+            </svg>
+            <span>Zzz</span>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal">Sobre RoncoMed</p>
+          <h2 class="reveal">Tu descanso también merece un espacio en tu lista de prioridades</h2>
+          <p class="reveal">
+            En <strong>RoncoMed</strong> nos especializamos en el diagnóstico y tratamiento de apnea del sueño,
+            ronquido y otros trastornos respiratorios del sueño que afectan tu calidad de vida.
+          </p>
+          <p class="reveal">
+            Sabemos que roncar no es “normal” ni algo que debas aguantar. Detrás del ronquido puede haber
+            una vía aérea que se cierra mientras duermes, y eso impacta tu energía, tu corazón, tu ánimo
+            y hasta el descanso de quien duerme a tu lado.
+          </p>
+
+          <div class="mv">
+            <article class="mv__card spot reveal">
+              <span class="mv__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+              <h3>Misión</h3>
+              <p>Devolver a cada paciente un sueño reparador mediante un diagnóstico preciso y tratamientos
+                personalizados, explicados con claridad y acompañados con calidez en cada etapa.</p>
+            </article>
+            <article class="mv__card spot reveal" data-delay="1">
+              <span class="mv__icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+              <h3>Visión</h3>
+              <p>Ser la clínica de referencia en Veracruz para el tratamiento del ronquido y la apnea del sueño,
+                reconocida por su calidad humana y su enfoque integral.</p>
+            </article>
+          </div>
+
+          <ul class="values reveal">
+            <li>Empatía</li><li>Ética médica</li><li>Precisión</li><li>Actualización constante</li><li>Cercanía</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEST DE SÍNTOMAS ===================== -->
+    <section class="section section--tint" id="sintomas">
+      <div class="container quiz">
+        <div class="quiz__intro">
+          <p class="eyebrow reveal">Autoevaluación rápida</p>
+          <h2 class="reveal">¿Te identificas con alguna de estas señales?</h2>
+          <p class="reveal">Marca las que te pasen con frecuencia. No sustituye una consulta médica, pero te ayuda a saber si vale la pena una valoración.</p>
+
+          <div class="quiz__meter reveal" aria-live="polite">
+            <svg viewBox="0 0 120 120" class="ring">
+              <circle cx="60" cy="60" r="52" class="ring__bg"/>
+              <circle cx="60" cy="60" r="52" class="ring__fg" id="ringFg"/>
+            </svg>
+            <div class="quiz__count"><strong id="quizCount">0</strong><span>de 6</span></div>
+          </div>
+          <p class="quiz__result" id="quizResult">Selecciona las señales que reconozcas.</p>
+          <a href="#contacto" class="btn btn--primary quiz__cta" id="quizCta">Quiero una valoración</a>
+        </div>
+
+        <div class="quiz__options" role="group" aria-label="Señales de alerta">
+          <label class="check reveal"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Ronco fuerte</strong> o me lo han dicho varias veces</span></label>
+          <label class="check reveal" data-delay="1"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Pausas al respirar</strong> mientras duermo, según mi pareja</span></label>
+          <label class="check reveal" data-delay="2"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Despierto cansado</strong> aunque haya dormido muchas horas</span></label>
+          <label class="check reveal"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Me da sueño de día</strong> manejando, en juntas o viendo TV</span></label>
+          <label class="check reveal" data-delay="1"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Dolor de cabeza</strong> o boca seca al despertar</span></label>
+          <label class="check reveal" data-delay="2"><input type="checkbox"><span class="check__box"></span><span class="check__txt"><strong>Nariz tapada</strong> frecuente o respiro por la boca</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Servicios</p>
+          <h2 class="reveal">Un tratamiento a la medida de cómo respiras</h2>
+          <p class="reveal">Evaluamos nariz, garganta y vía aérea completa para encontrar la causa y no solo tratar el síntoma.</p>
+        </div>
+
+        <div class="services">
+          <article class="service spot reveal">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v4a5 5 0 1 0 4 0V3"/><path d="M12 12v4M10 14h4"/></svg></span>
+            <h3>Valoración otorrinolaringológica</h3>
+            <p>Exploración completa de nariz, garganta y vía aérea superior para identificar qué provoca tu ronquido.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+          <article class="service spot reveal" data-delay="1">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+            <h3>Estudios de sueño</h3>
+            <p>Registramos tu respiración y oxigenación durante la noche para confirmar y medir la apnea del sueño.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+          <article class="service spot reveal" data-delay="2">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="10" height="9" rx="2"/><path d="M13 15h3a4 4 0 0 0 4-4V8"/><circle cx="20" cy="6" r="2"/></svg></span>
+            <h3>Terapia CPAP</h3>
+            <p>Te ayudamos a elegir, ajustar y adaptarte a tu equipo de presión positiva para dormir sin pausas respiratorias.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+          <article class="service spot reveal">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/><path d="M8 11h6"/></svg></span>
+            <h3>Endoscopía de vía aérea</h3>
+            <p>Visualizamos con precisión el sitio de obstrucción para elegir el tratamiento más efectivo.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+          <article class="service spot reveal" data-delay="1">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M4 20l7-7M14 4l6 6-8 8-6-6z"/></svg></span>
+            <h3>Cirugía del sueño</h3>
+            <p>Procedimientos de nariz, paladar y garganta, recomendados solo cuando realmente son la mejor opción para ti.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+          <article class="service spot reveal" data-delay="2">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></span>
+            <h3>Seguimiento integral</h3>
+            <p>Acompañamiento continuo y hábitos de higiene del sueño para que los resultados se mantengan en el tiempo.</p>
+            <span class="service__more">Ver más →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESO ===================== -->
+    <section class="section section--deep" id="proceso">
+      <div class="container">
+        <div class="section__head section__head--light">
+          <p class="eyebrow reveal">Cómo trabajamos</p>
+          <h2 class="reveal">De tu primera consulta a tu primera noche de buen sueño</h2>
+        </div>
+
+        <ol class="steps" id="steps">
+          <span class="steps__line" aria-hidden="true"><span id="stepsFill"></span></span>
+          <li class="step reveal"><span class="step__num">01</span><h3>Consulta</h3><p>Escuchamos tu historia, la de tu pareja y exploramos tu vía aérea.</p></li>
+          <li class="step reveal" data-delay="1"><span class="step__num">02</span><h3>Estudio</h3><p>Medimos cómo respiras mientras duermes con un estudio de sueño.</p></li>
+          <li class="step reveal" data-delay="2"><span class="step__num">03</span><h3>Diagnóstico</h3><p>Te explicamos tus resultados con claridad y sin tecnicismos.</p></li>
+          <li class="step reveal" data-delay="3"><span class="step__num">04</span><h3>Tratamiento</h3><p>Diseñamos tu plan: CPAP, cirugía o manejo combinado, y te acompañamos.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ESPECIALISTAS ===================== -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Especialistas</p>
+          <h2 class="reveal">Manos expertas, trato cercano</h2>
+        </div>
+
+        <div class="team">
+          <article class="doctor spot reveal">
+            <div class="doctor__photo">
+              <!-- Cuando tengas su foto, súbela como img/dra-diana.jpg -->
+              <img src="img/dra-diana.jpg" alt="Dra. Diana Villalobos" onerror="this.remove()">
+              <span class="doctor__initials">DV</span>
+            </div>
+            <div class="doctor__info">
+              <h3>Dra. Diana Villalobos</h3>
+              <p class="doctor__role">Otorrinolaringóloga</p>
+              <ul class="doctor__meta">
+                <li><span>Formación</span>Universidad Cristóbal Colón <em>(ejemplo)</em></li>
+                <li><span>Especialidad</span>Otorrinolaringología y Cirugía de Cabeza y Cuello</li>
+                <li><span>Céd. Prof.</span>0000000 <em>(ejemplo)</em></li>
+                <li><span>Céd. Esp.</span>0000000 <em>(ejemplo)</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="doctor spot reveal" data-delay="1">
+            <div class="doctor__photo">
+              <!-- Cuando tengas su foto, súbela como img/dr-raziel.jpg -->
+              <img src="img/dr-raziel.jpg" alt="Dr. Raziel Miranda" onerror="this.remove()">
+              <span class="doctor__initials">RM</span>
+            </div>
+            <div class="doctor__info">
+              <h3>Dr. Raziel Miranda</h3>
+              <p class="doctor__role">Especialidad <em>(ejemplo)</em></p>
+              <ul class="doctor__meta">
+                <li><span>Formación</span>Universidad Cristóbal Colón <em>(ejemplo)</em></li>
+                <li><span>Enfoque</span>Trastornos respiratorios del sueño <em>(ejemplo)</em></li>
+                <li><span>Céd. Prof.</span>0000000 <em>(ejemplo)</em></li>
+                <li><span>Céd. Esp.</span>0000000 <em>(ejemplo)</em></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DESDE REDES ===================== -->
+    <section class="section section--tint" id="blog">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Desde nuestras redes</p>
+          <h2 class="reveal">Información que te ayuda a dormir mejor</h2>
+        </div>
+
+        <div class="posts">
+          <button class="post reveal" data-full="img/cpap.jpg" data-caption="CPAP: ¿para quiénes se recomienda?">
+            <img src="img/cpap.jpg" alt="CPAP: ¿para quiénes se recomienda?">
+            <span class="post__overlay"><span>CPAP: ¿para quiénes se recomienda?</span><i>Ver</i></span>
+          </button>
+          <button class="post reveal" data-delay="1" data-full="img/descanso.jpg" data-caption="Tu descanso también merece un espacio en tu lista de prioridades">
+            <img src="img/descanso.jpg" alt="Tu descanso también merece un espacio en tu lista de prioridades">
+            <span class="post__overlay"><span>Tu descanso es prioridad</span><i>Ver</i></span>
+          </button>
+          <button class="post reveal" data-delay="2" data-full="img/cirugia.jpg" data-caption="La cirugía del sueño se recomienda cuando realmente es la mejor opción para ti">
+            <img src="img/cirugia.jpg" alt="La cirugía del sueño">
+            <span class="post__overlay"><span>La cirugía del sueño</span><i>Ver</i></span>
+          </button>
+        </div>
+
+        <div class="center reveal">
+          <a href="https://www.facebook.com/profile.php?id=61577263913280&locale=es_LA" target="_blank" rel="noopener" class="btn btn--ghost">Ver más en Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section class="section" id="testimonios">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Testimonios <em class="tag">ejemplo</em></p>
+          <h2 class="reveal">Noches que cambiaron vidas</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote spot reveal">
+            <blockquote>“Mi esposa ya no se va a dormir a la sala. Y yo por fin despierto descansado.”</blockquote>
+            <figcaption><span class="avatar">JC</span>Juan C. · Paciente</figcaption>
+          </figure>
+          <figure class="quote spot reveal" data-delay="1">
+            <blockquote>“Me explicaron todo con mucha paciencia. Me adapté al CPAP en pocas semanas.”</blockquote>
+            <figcaption><span class="avatar">MR</span>María R. · Paciente</figcaption>
+          </figure>
+          <figure class="quote spot reveal" data-delay="2">
+            <blockquote>“Ya no me quedo dormido en el trabajo. No sabía cuánto me afectaba la apnea.”</blockquote>
+            <figcaption><span class="avatar">LG</span>Luis G. · Paciente</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section section--tint" id="faq">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow reveal">Preguntas frecuentes</p>
+          <h2 class="reveal">Resolvemos tus dudas</h2>
+          <p class="reveal">¿No encuentras la tuya? Escríbenos por WhatsApp y con gusto te respondemos.</p>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item reveal" open>
+            <summary>¿Roncar es peligroso?</summary>
+            <p>No siempre, pero el ronquido fuerte y frecuente puede ser señal de apnea obstructiva del sueño, que se asocia con hipertensión, problemas cardiacos y somnolencia diurna. Vale la pena valorarlo.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Qué es la apnea del sueño?</summary>
+            <p>Es cuando la vía aérea se cierra parcial o totalmente mientras duermes, provocando pausas en la respiración y microdespertares que impiden un descanso profundo.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Siempre se necesita cirugía?</summary>
+            <p>No. Muchos pacientes mejoran con terapia CPAP u otras medidas. La cirugía se recomienda solo cuando realmente es la mejor opción para ti.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Cómo es un estudio de sueño?</summary>
+            <p>Se colocan sensores que registran tu respiración, oxigenación y otros parámetros mientras duermes. Es indoloro y te explicamos cada paso.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Necesito ir con mi pareja a la consulta?</summary>
+            <p>No es obligatorio, pero ayuda mucho: suele ser quien nota los ronquidos y las pausas al respirar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contacto</p>
+          <h2 class="reveal">Agenda tu valoración</h2>
+          <p class="reveal">Déjanos tus datos y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+
+          <ul class="contact__list">
+            <li class="reveal"><span class="ci"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><strong>Dirección</strong><a href="https://maps.google.com/?q=Calzada+Juan+Pablo+II+1663,+Boca+del+Rio,+Veracruz,+94294" target="_blank" rel="noopener">Calzada Juan Pablo II 1663, Boca del Río, Ver., C.P. 94294</a></div></li>
+            <li class="reveal"><span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>Horario</strong>Lun a Vie 10:00 – 19:00 · Sáb 10:00 – 14:00 <em>(ejemplo)</em></div></li>
+            <li class="reveal"><span class="ci"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+              <div><strong>Teléfono</strong><a href="tel:+522290000000">229 000 0000 <em>(ejemplo)</em></a></div></li>
+          </ul>
+
+          <div class="socials reveal">
+            <a href="https://www.facebook.com/profile.php?id=61577263913280&locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook de RoncoMed" class="social social--fb">
+              <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram (ejemplo)" class="social social--ig">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok (ejemplo)" class="social social--tt">
+              <svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg>
+            </a>
+            <a href="https://wa.me/522290000000" target="_blank" rel="noopener" aria-label="WhatsApp (ejemplo)" class="social social--wa">
+              <svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg>
+            </a>
+            <span class="socials__handle">@RoncoMed</span>
+          </div>
+        </div>
+
+        <form class="form spot reveal" id="citaForm" data-delay="1" novalidate>
+          <h3>Solicitar cita</h3>
+          <div class="field">
+            <input type="text" id="fNombre" placeholder=" " required>
+            <label for="fNombre">Nombre completo</label>
+          </div>
+          <div class="field">
+            <input type="tel" id="fTel" placeholder=" " required>
+            <label for="fTel">Teléfono</label>
+          </div>
+          <div class="field">
+            <select id="fMotivo" required>
+              <option value="" disabled selected hidden></option>
+              <option>Ronquido</option>
+              <option>Sospecha de apnea del sueño</option>
+              <option>Terapia CPAP</option>
+              <option>Valoración para cirugía</option>
+              <option>Otro motivo</option>
+            </select>
+            <label for="fMotivo">Motivo de consulta</label>
+          </div>
+          <div class="field">
+            <textarea id="fMsg" rows="3" placeholder=" "></textarea>
+            <label for="fMsg">Cuéntanos un poco (opcional)</label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">
+            Enviar por WhatsApp
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__note" id="formNote">Tus datos solo se usan para agendar tu cita.</p>
+        </form>
+      </div>
+
+      <div class="container map reveal">
+        <iframe
+          title="Ubicación de RoncoMed en Boca del Río"
+          src="https://www.google.com/maps?q=Calzada+Juan+Pablo+II+1663,+Boca+del+Rio,+Veracruz,+94294&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER con olas animadas (animación inferior) ===================== -->
+  <footer class="footer">
+    <div class="waves" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="wave wave--1"><path d="M0,64 C240,120 480,0 720,48 C960,96 1200,16 1440,64 L1440,120 L0,120 Z"/></svg>
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="wave wave--2"><path d="M0,80 C300,20 540,110 780,60 C1020,10 1260,90 1440,50 L1440,120 L0,120 Z"/></svg>
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="wave wave--3"><path d="M0,90 C360,40 600,120 900,80 C1140,48 1300,96 1440,80 L1440,120 L0,120 Z"/></svg>
+    </div>
+    <div class="footer__body">
+      <div class="container footer__grid">
+        <div>
+          <img src="img/logo-blanco.png" alt="RoncoMed" class="footer__logo">
+          <p>Diagnóstico y tratamiento de apnea del sueño, ronquido y trastornos respiratorios del sueño.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#equipo">Especialistas</a><a href="#contacto">Contacto</a>
+        </div>
+        <div>
+          <h4>Visítanos</h4>
+          <p>Calzada Juan Pablo II 1663<br>Boca del Río, Ver. 94294</p>
+        </div>
+      </div>
+      <div class="container footer__legal">
+        <p>Dra. Diana Villalobos · Céd. Prof. 0000000 · Céd. Esp. 0000000 &nbsp;|&nbsp; Dr. Raziel Miranda · Céd. Prof. 0000000</p>
+        <p>© <span id="year"></span> RoncoMed · Clínica de Ronquido y Apnea. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botones flotantes -->
+  <a href="https://wa.me/522290000000?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20RoncoMed" class="fab-wa" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg>
+    <span>¿Agendamos?</span>
+  </a>
+  <button class="to-top" id="toTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <!-- Visor de imágenes -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button class="lightbox__close" id="lbClose" aria-label="Cerrar">×</button>
+    <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
